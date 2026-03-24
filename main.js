@@ -541,6 +541,28 @@ function showPage(pageID, el) {
     if (typeof sbPopulateDeleteDropdown === 'function') sbPopulateDeleteDropdown();
   }
 
+  if (pageID === "vaultPlayingPage") {
+    if (typeof playerPlayingRenderList === 'function') playerPlayingRenderList();
+  }
+
+  if (pageID === "vaultRegisterPage") {
+    if (typeof vaultRenderRegister === 'function') vaultRenderRegister();
+  }
+
+  if (pageID === "vaultModifyPage") {
+    if (typeof vaultRenderModify === 'function') vaultRenderModify();
+  }
+
+  if (pageID === "vaultRequestsPage") {
+    if (typeof vaultLoadRequests === 'function') vaultLoadRequests();
+  }
+
+  if (pageID === "vaultClubMgmtPage") {
+    if (typeof clubLoginRefresh === 'function') clubLoginRefresh();
+    if (typeof viewerLoadClubs === 'function') viewerLoadClubs();
+    if (typeof sbPopulateDeleteDropdown === 'function') sbPopulateDeleteDropdown();
+  }
+
   // Update last visited page
   lastPage = pageID;
 }
